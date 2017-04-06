@@ -1,0 +1,50 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <font size=2>
+  <ul>
+
+    <li>Notifications</li>
+    <settings-notifications [parent]="form">
+    </settings-notifications>
+
+    <br>
+    <li>Workstations</li>
+    <settings-workstations [parent]="form">
+    </settings-workstations>
+
+    <br>
+    <li>Server</li>
+    <settings-servers [parent]="form">
+    </settings-servers>
+
+    <br>
+    <li>Lifecycle Management (Active Directory)</li>
+    <settings-lifecyclemanagement [parent]="form">
+    </settings-lifecyclemanagement>
+
+    <br>
+    <li>Other</li>
+    <settings-other [parent]="form">
+    </settings-other>
+
+    <br>
+    <li>Reports</li>
+    <settings-reports [parent]="form">
+    </settings-reports>
+
+  </ul>
+  <button
+   md-raised-button
+   [disabled]="form.invalid"
+   type="submit"
+   style="background: lightsteelblue;">
+   Update Settings
+   </button>
+</font>
+</form>
+<div *ngIf="debug">
+<font size=1><pre>{{ form.value | json }}</pre></font>
+<hr>
+Firebase Data:
+<font size=1><pre>{{ Data | json }}</pre></font>
+</div>

@@ -1,0 +1,47 @@
+<div class="container" fxLayout.xs="colum" fxHide.xs fxLayoutAlign="center" fxLayoutAlign.xs="center" fxLayoutGap="10px"
+    fxLayoutGap.xs="10px">
+
+    <table align=center>
+        <tr>
+            <td>
+
+                <br><br>
+                <br><br>
+                <div *ngIf="!authInfo?.isLoggedIn()">
+                    <a [routerLink]="['/home']">Home</a><br><br>
+                    <a [routerLink]="['/login']">Login</a><br><br>
+                    <a [routerLink]="['/register']">Register</a><br><br>
+                </div>
+                <div *ngIf="authInfo?.isLoggedIn()">
+                    <a [routerLink]="['/dashboard']">Dashboard</a><br><br>
+                    <a [routerLink]="['/settings']">Settings</a><br><br>
+                    <a href="/" (click)="logout()">Logout</a><br><br>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="container" fxLayout.xs="colum" fxHide.gt-xs fxLayoutAlign="center" fxLayoutAlign.xs="center">
+
+    <div *ngIf="!authInfo?.isLoggedIn()">
+
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/login']">Login</a>
+        <a [routerLink]="['/register']">Register</a>
+    </div>
+    <div *ngIf="authInfo?.isLoggedIn()">
+
+        <a [routerLink]="['/dashboard']" alt="Dashboard" title="Dashboard" border=0>
+            <svg-image-dashboard></svg-image-dashboard>
+        </a>
+        <a [routerLink]="['/settings']" alt="Settings" title="Settings">
+            <svg-image-cogwheel></svg-image-cogwheel>
+        </a>
+        <a href="/" (click)="logout()" alt="Logout" title="Logout">
+            <svg-image-logout></svg-image-logout>
+        </a>
+    </div>
+
+</div>

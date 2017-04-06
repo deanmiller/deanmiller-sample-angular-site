@@ -1,0 +1,54 @@
+<div [formGroup]="parent">
+<div formGroupName="workstations">
+
+<ul>
+
+    <input
+         type="checkbox"
+         formControlName="Inventory">Inventory Workstations<br>
+
+    
+        <!--<input
+         type="checkbox"
+         formControlName="Clean">Clean Workstations<br>-->
+
+   <md-checkbox formControlName="Clean" color=blue class="md-checked" style="background-color: white;border-color: green;">Clean Workstations</md-checkbox><br>
+
+    <!--<md-pseudo-checkbox formControlName="RemoveOldRoamingProfiles">Remove roming profiles that are over</md-pseudo-checkbox>-->
+    <input
+         type="checkbox"
+         formControlName="RemoveOldRoamingProfiles">Remove roming profiles that are over
+
+     <md-input-container>
+      <input
+       mdInput
+         type="text"
+         formControlName="DaysOld"
+         style="width: 20px;">
+       </md-input-container> days old.<br>
+
+      <input
+         type="checkbox"
+         value="90"
+         formControlName="PruneOldFiles"
+         >Prund old Temp & windows update Files older than
+
+          <md-input-container>
+      <input
+       mdInput
+         type="text"
+         formControlName="PruneFilesOlderThan"
+         style="width: 20px;"> 
+         </md-input-container>days old.<br>
+        
+
+        <input
+         type="checkbox"
+         formControlName="BlockUnwantedPrograms"
+         style="width: 25px;">Block unwanted programs from starting when windows starts
+
+      <br>
+   </ul>
+
+</div>
+</div>

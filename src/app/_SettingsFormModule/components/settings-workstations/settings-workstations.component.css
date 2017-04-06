@@ -1,0 +1,14 @@
+md-checkbox .md-icon {
+    background: red;
+}
+md-checkbox.md-default-theme.md-checked .md-icon {
+    background: orange;
+}
+
+md-checkbox.md-checked ._md-icon {
+         background-color: white;
+}
+
+md-checkbox .md-icon {
+  border-color: green;
+}

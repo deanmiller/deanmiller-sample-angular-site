@@ -1,0 +1,26 @@
+<form autocomplete="off" novalidate class="login-form" [formGroup]="form">
+
+<br><br><br>
+  <fieldset>
+    <legend>Register</legend>
+
+    <div class="form-field">
+      <label>Email:</label>
+      <input name="email" formControlName="email">
+    </div>
+
+    <div class="form-feild">
+      <label>Password:</label>
+      <input name="password" formControlName="password" type="password">
+    </div>
+
+    <div class="form-feild">
+      <label>Confirm Password:</label>
+      <input name="confirm" formControlName="confirm" type="password">
+    </div>
+
+  </fieldset>
+<br>
+  <button md-raised-button style="background: lightsteelblue;" (click)="signUp()" [disabled]="!isPasswordMatch()">Create User</button>
+
+</form>
