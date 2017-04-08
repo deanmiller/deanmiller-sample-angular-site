@@ -1,6 +1,8 @@
 import { AuthInfo } from './../shared/security/auth-info';
 import { AuthService } from './../shared/security/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { SvgImagePowershellComponent } from '../SVG/svg-image-powershell/svg-image-powershell.component';
 import { SvgImageCogwheelComponent } from '../SVG/svg-image-cogwheel/svg-image-cogwheel.component';
 import { SvgImageDashboardComponent } from '../SVG/svg-image-dashboard/svg-image-dashboard.component';
@@ -15,7 +17,7 @@ export class TopMenuComponent implements OnInit {
 
   authInfo: AuthInfo
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router:Router) { }
 
   ngOnInit() {
 
@@ -26,6 +28,7 @@ export class TopMenuComponent implements OnInit {
 
 logout(){
 
+   this.router.navigate(['/home'])
    this.authService.logout()
 }
 

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-constructor(private authService: AuthService,){ // private r: Router
+constructor(private authService: AuthService, private router: Router){
 
 }
 
@@ -19,7 +19,7 @@ constructor(private authService: AuthService,){ // private r: Router
           .take(1)
           .do(allowed => {
               if(!allowed) {
-                //this.r.navigate(['/login']);
+                this.router.navigate(['/login']);
               }
           });        
       //return undefined;

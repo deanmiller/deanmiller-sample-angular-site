@@ -1,7 +1,7 @@
-import {AuthService} from './../shared/security/auth.service';
-import {Component,OnInit} from '@angular/core';
-import {Validators,FormGroup, FormBuilder} from '@angular/forms';
-import {Router} from '@angular/router';
+import { AuthService } from './../shared/security/auth.service';
+import { Component, OnInit } from '@angular/core';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb:FormBuilder,
               private authService:AuthService,
-              /*private _r:Router*/) { 
+              private router:Router) { 
 
     this.form = this.fb.group({
         email: ['',Validators.required],
@@ -31,10 +31,7 @@ export class LoginComponent implements OnInit {
     const formValue = this.form.value;
 
    this.authService.login(formValue.email, formValue.password)
-        .subscribe(
-            /*() => this._r.navigate(['/home']),*/
-            console.log
-        );
+        .subscribe( () => this.router.navigate(['/dashboard']) );
   }
 
 
