@@ -1,0 +1,33 @@
+<h4 align=center  style="color:#e2d8d7;">Dashboard</h4>
+
+
+  <md-card>  
+    <md-card-title>Company</md-card-title>
+    <md-card-content>
+    <div align=center>Contact Number: {{ WebAppAccounts?.Data.CompanyInformation.ContactNumber }}</div>
+    <div align=center>Mailing Address: {{ WebAppAccounts?.Data.CompanyInformation.MailingAddress }}</div>
+    </md-card-content>
+  </md-card>
+
+  <md-card>  
+    <md-card-title>Domain</md-card-title>
+    <md-card-content>
+      <div align=center>{{ WebAppAccounts?.Data.DomainInformation.WindowsDomain }}</div>
+    </md-card-content>
+  </md-card>
+
+  <md-card>  
+    <md-card-title>Servers</md-card-title>
+    <md-card-content>
+      <div align=center>{{ WebAppAccounts?.Data.DomainInformation.Servers }}</div>
+    </md-card-content>
+  </md-card>
+
+  <!-- MD Card: https://github.com/angular/material2/blob/master/src/demo-app/card/card-demo.html -->
+
+  <md-card>
+    <md-card-title>Workstations</md-card-title>
+    <md-card-content>
+      <div align=center>{{ WebAppAccounts?.Data.DomainInformation.Workstations }}</div>
+    </md-card-content>
+  </md-card>

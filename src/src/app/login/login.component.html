@@ -1,0 +1,22 @@
+<form autocomplete="off" novalidate class="login-form" [formGroup]="form">
+
+<br><br><br>
+  <fieldset>
+    <legend>Login</legend>
+    <div class="form-field">
+      <label>Email:</label>
+      <md-input-container>
+      <input mdInput name="email" formControlName="email">
+      </md-input-container>
+    </div>
+    <div class="form-feild">
+      <label>Password:</label>
+      <md-input-container>
+      <input mdInput name="password" formControlName="password" type="password">
+      </md-input-container>
+    </div>
+  </fieldset>
+ <br>
+  <button md-raised-button (click)="login()" style="background: lightsteelblue;">Login</button>
+
+</form>

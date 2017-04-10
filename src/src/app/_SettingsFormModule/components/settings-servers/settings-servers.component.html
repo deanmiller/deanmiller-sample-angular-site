@@ -1,0 +1,48 @@
+<div [formGroup]="parent">
+<div formGroupName="servers">
+
+<ul>
+
+ 
+  <!--<input
+       type="checkbox"
+       formControlName="MonitorServers"
+       style="width: 25px;">Ping Servers & notify when down<br><br>-->
+
+       <md-checkbox
+        formControlName="MonitorServers">
+        Ping Servers & notify when down
+       </md-checkbox><br><br>
+
+    <md-input-container>
+      <input
+       mdInput
+       type="text"
+       formControlName="Servers"
+       placeholder="Servers (If no server names are listed all servers will be monitored)"
+       style="width: 380px;">
+    </md-input-container><br>
+
+  <!--<input
+       type="checkbox"
+       formControlName="MonitorDiskSpace">Monitor Server Disk space<br>-->
+
+       <md-checkbox
+        formControlName="MonitorDiskSpace">
+        Monitor Server Disk space
+       </md-checkbox><br>
+
+
+      <!--<input
+       type="checkbox"
+       formControlName="DefragServers">Defrag Servers<br>-->
+
+       <md-checkbox
+        formControlName="DefragServers">
+        Defrag Servers
+       </md-checkbox><br>
+
+</ul>
+
+</div>
+</div>

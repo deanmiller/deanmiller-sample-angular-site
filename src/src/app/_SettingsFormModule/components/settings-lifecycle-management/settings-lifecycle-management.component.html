@@ -1,0 +1,48 @@
+<div [formGroup]="parent">
+<div formGroupName="lifecyclemanagement">
+<ul>
+  
+    
+      <!--<input
+       type="checkbox"
+       formControlName="RemoveOldComputers">Remove computers that have not logged on in-->
+
+      <md-checkbox
+        formControlName="RemoveOldComputers">
+        Remove computers that have not logged on in
+      </md-checkbox>
+
+      <md-input-container>
+      <input
+       mdInput
+       type="text"
+       formControlName="RemoveOldComputersdays"
+       style="width: 30px;"> 
+       </md-input-container>days from Active Directory
+    <br>
+    
+    <!--<input
+       type="checkbox"
+       formControlName="RemoveOldUsers">Remove users that have not logged on in-->
+
+       <md-checkbox
+        formControlName="RemoveOldUsers">
+        Remove users that have not logged on in
+       </md-checkbox>
+
+      <md-input-container>
+      <input
+       mdInput
+       type="text"
+       formControlName="RemoveOldUsersdays"
+       style="width: 30px;"> 
+       </md-input-container>days from Active Directory
+    <br>
+
+    
+
+</ul>
+
+
+  </div>
+  </div>

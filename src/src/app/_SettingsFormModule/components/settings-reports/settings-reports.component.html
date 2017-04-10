@@ -1,0 +1,36 @@
+<div [formGroup]="parent">
+<div formGroupName="reports">
+
+<ul>
+  
+        <!--<input
+         type="checkbox"
+         formControlName="Prune"> Report pruned client Data<br>-->
+
+        <md-checkbox
+        formControlName="Prune">
+        Report pruned client Data
+        </md-checkbox><br>
+  
+        <!--<input
+         type="checkbox"
+         formControlName="OldUsers"> Report Old users<br>-->
+  
+       <md-checkbox
+        formControlName="OldUsers">
+        Report Old users
+       </md-checkbox><br>
+
+        <!--<input
+         type="checkbox"
+         formControlName="ServerUptime"> Report Server Uptimes<br>-->
+
+       <md-checkbox
+        formControlName="ServerUptime">
+        Report Server Uptimes
+        </md-checkbox><br>
+
+</ul>
+
+</div>
+</div>
