@@ -1,2 +1,1 @@
-# deanmiller-sample-angular-site
-sample angular site
+Sample Site Hosted at: https://deanmiller-sample-angular-site.firebaseapp.com/
